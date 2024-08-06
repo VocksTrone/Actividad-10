@@ -56,7 +56,7 @@ namespace Actividad_10
             Console.WriteLine("1. Teléfono");
             Console.WriteLine("2. Ordenador");
             Console.WriteLine("3. Tablet");
-            Console.WriteLine("Seleccione una Opción Válida");
+            Console.Write("Seleccione una Opción Válida: ");
             int optionMAP = int.Parse(Console.ReadLine());
             return optionMAP;
         }
