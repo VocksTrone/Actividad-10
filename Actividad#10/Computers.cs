@@ -8,7 +8,7 @@ namespace Actividad_10
 {
     public class Computers : Products
     {
-        public Computers(string name) : base(name)
+        public Computers(string name, string type) : base(name, type)
         {
 
         }

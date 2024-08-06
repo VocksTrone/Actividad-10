@@ -1,3 +1,4 @@
 ﻿using Actividad_10;
 
-List <Products> products = new List <Products>();
+List <Products> productsList = new List <Products>();
+
