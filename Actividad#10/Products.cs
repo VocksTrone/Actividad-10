@@ -19,6 +19,7 @@ namespace Actividad_10
         }
         public static void AddProduct(ref List<Products> productsList)
         {
+            Console.Clear();
             Console.WriteLine("Ingrese el Nombre del Producto");
             string name = Console.ReadLine();
             int optionAP = MenuAddProduct();
@@ -54,11 +55,20 @@ namespace Actividad_10
         }
         public static void ListProduct(ref List<Products> productsList)
         {
-            Console.WriteLine("\nLa Lista de los Productos Registrados es:");
-            foreach (Products product in productsList)
+            if (productsList.Count == 0)
             {
-                Console.WriteLine($"Nombre: {product.Name}, Tipo: {product.Type}");
-                Console.ReadKey();
+                Console.WriteLine("\nNo Existen Productos Registrados");
+                Console.ReadKey(); 
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("\nLa Lista de los Productos Registrados es:");
+                foreach (Products product in productsList)
+                {
+                    Console.WriteLine($"Nombre: {product.Name}, Tipo: {product.Type}");
+                    Console.ReadKey();
+                }
             }
         }
         public static void SearchProduct(ref List<Products> productsList)
@@ -70,6 +80,7 @@ namespace Actividad_10
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("\nIngrese el Nombre del Producto a Buscar");
                 string name = Console.ReadLine();
                 Products searchProduct = productsList.Find(p => p.Name == name);
