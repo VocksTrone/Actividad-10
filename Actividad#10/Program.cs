@@ -2,7 +2,18 @@
 
 bool generalContinue = true;
 List <Products> productsList = new List <Products>();
-
+while (generalContinue)
+{
+    try
+    {
+        ShowSwitch(ref productsList, ref generalContinue);
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("\nERROR!, Datos Inválidos");
+        Console.ReadKey();
+    }
+}
 static int ShowMenu()
 {
     Console.Clear();
