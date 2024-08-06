@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace Actividad_10
 {
-    abstract class Products
+    public class Products
     {
         public string Name { get; set; }
         public Products(string name)
