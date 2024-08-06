@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Actividad_10
 {
-    internal class Computers
+    public class Computers : Products
     {
+        public Computers(string name) : base(name)
+        {
+
+        }
     }
 }
